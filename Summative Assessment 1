@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	char loc;
+	cout << "Enter the designated location you want to go (A for Abu Dhabi/S for Sharjah/J for Ajman/D for Dubai): " << endl;
+	cin >> loc;
+
+
+	if (loc != 0)
+	{
+		cout << "Do you want to avail the transportation? Y/N: " << endl;
+		char trans;
+		cin >> trans;
+
+
+		switch (trans)
+		{
+		case 'Y':
+		case 'y':
+			cout << "Your transportation is confirmed." << endl;
+			switch (loc)
+			{
+			case 'A':
+			case 'a':
+				cout << "You have chosen Abu Dhabi, travelling fee is AED 1000." << endl;
+				break;
+
+			case 'S':
+			case 's':
+				cout << "You have chosen Sharjah, travelling fee is AED 500." << endl;
+				break;
+
+			case 'J':
+			case 'j':
+				cout << "You have chosen Ajman, travelling fee is AED 390." << endl;
+				break;
+
+			case 'D':
+			case 'd':
+				cout << "You have chosen Dubai, travelling fee is AED 650." << endl;
+				break;
+
+			default:
+				cout << "Invalid input";
+				break;
+			}
+			break;
+
+		case 'N':
+		case 'n':
+			cout << "Your transporation is cancelled." << endl;
+			break;
+
+		default:
+			cout << "Invalid input";
+			break;
+		}
+	}
+	else
+	{
+		cout << "Invalid Input" << endl;
+	}
+}
